@@ -1,0 +1,24 @@
+<template>
+        
+        <lightning-button variant="brand"
+         label="Payment Schedule" 
+         title="Primary action"
+          onclick={handleShow} class="slds-m-left_x-small"></lightning-button>
+
+    
+    
+    <template if:true = {showDataTable}>
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}
+                default-sort-direction={defaultSortDirection}
+                sorted-direction={sortDirection}
+                sorted-by={sortedBy}
+                onsort={onHandleSort}
+                hide-checkbox-column>
+        </lightning-datatable>
+
+</template>
+
+</template>

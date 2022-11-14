@@ -1,0 +1,54 @@
+.lgc-bg {
+    background-color: rgb(255, 255, 0);
+  
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-variant-caps: all-petite-caps;
+}
+
+.lgc-bg-inverse {
+    background-color: rgb(255, 255, 255);
+    
+    color : rgb(0, 0, 0);
+    font-size: large;
+   
+    
+    
+    font-size: 25px;
+    
+  
+}
+.lgc-bg-inverse1 {
+    
+    background-color: rgb(0, 255, 47);
+    color: black;
+    font-size: large;
+    
+    font-weight: bold;
+    
+    font-size: 15px;
+}
+.Template-Background{
+    padding: 3px;
+    padding-left: 400px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+  font-weight: bold;
+    width: 500px;
+
+    
+}
+.BG{
+    background-color: rgb(60, 255, 0);
+    font-weight: bold;
+}
+
+.lgc-bg20 {
+    background-color: rgb(251, 255, 0);
+    font-weight: bold;
+}
+.BG1{
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+}

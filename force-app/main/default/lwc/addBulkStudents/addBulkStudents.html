@@ -1,0 +1,23 @@
+<template>
+    
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+                Add Multiple Students
+            </h2>
+    
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input type="Text" label="name1" onchange={valueChanged} value={name1} ></lightning-input>
+            </div>
+        
+    
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input type="Number " label="marks1" onchange={valueChanged} value={marks1} ></lightning-input>
+            </div>
+    
+          
+        </div>
+
+        <lightning-button variant="brand" label="Save" title="Save" onclick={handleOnAdd} class="slds-m-left_x-small"></lightning-button>
+    
+   
+</template>

@@ -1,0 +1,25 @@
+<template>
+    <lightning-card  title="Bank Details Information "  >
+        <lightning-layout multiple-rows="true" >
+            
+            
+                <div class="lgc-bg-inverse">
+            <lightning-input type="Number" name = "accountNo" label="accountNo"  onchange={valueChanged} value={accountNo}></lightning-input>
+        </div>
+        <div class="lgc-bg-inverse">
+            <lightning-input type="text" name="bankName" label="bankName"  onchange={valueChanged} value={bankName}></lightning-input>
+        </div>
+        <div class="lgc-bg-inverse">
+            <lightning-input type="Number" name = "IFSCCode" label="IFSCCode"  onchange={valueChanged} value={IFSCCode}></lightning-input>
+        </div>
+        <div class="lgc-bg-inverse">
+            <lightning-input type="text" label="branch"  onchange={valueChanged} value={branch}></lightning-input>
+        </div>
+  
+    
+</lightning-layout>
+
+
+
+    </lightning-card>
+</template>

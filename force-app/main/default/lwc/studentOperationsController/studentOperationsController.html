@@ -1,0 +1,49 @@
+<template>
+    <div class="BG">
+        <h2 class="lgc-bg">
+           Create a New Student
+        </h2>
+   
+    <lightning-tabset class="lgc-bg-inverse1"> 
+        <lightning-tab label="PERSONAL DETAILS" >
+            <div class="lgc-bg-inverse">
+                <lightning-input type="text" label="name"  onchange={valueChanged} value={name}></lightning-input>
+            </div>
+            <div class="lgc-bg-inverse">
+                <lightning-input type="Number" label="age"  onchange={valueChanged} value={age}></lightning-input>
+            </div>
+            
+           
+
+            <lightning-input type="date" name="date1" label="Date Of Birth"  onchange={valueChanged} value={date1} class="lgc-bg-inverse"></lightning-input>
+        </lightning-tab>
+        <lightning-tab label="MARK DETAILS" title="2nd tab extended title">
+            <div class="lgc-bg-inverse">
+                <lightning-input type="text" label="Tamil Mark"  onchange={valueChanged} value={tamilMark}></lightning-input>
+            </div>
+            <div class="lgc-bg-inverse">
+                <lightning-input type="text" label="English Mark"  onchange={valueChanged} value={englishMark}></lightning-input>
+            </div>
+            <div class="lgc-bg-inverse">
+                <lightning-input type="text" label="Maths Mark"  onchange={valueChanged} value={mathshMark}></lightning-input>
+            </div>
+            <div class="lgc-bg-inverse">
+                <lightning-input type="text" label="Science Mark"  onchange={valueChanged} value={scienceMark}></lightning-input>
+            </div>
+            <div class="lgc-bg-inverse">
+                <lightning-input type="text" label="Social Mark"  onchange={valueChanged} value={socialMark}></lightning-input>
+            </div>
+        </lightning-tab>
+    </lightning-tabset>
+    </div>
+    
+<!-- Brand variant: Identifies the primary action in a group of buttons -->
+<lightning-button variant="brand" label="Save" title="Save" onclick={handleOnSave} class="Template-Background"></lightning-button>
+    
+    
+<!-- Brand variant: Identifies the primary action in a group of buttons -->
+<lightning-button variant="brand" label="Update " title="Update" onclick={handleOnUpdate} class="Template-Background"></lightning-button>
+
+  <!-- Brand variant: Identifies the primary action in a group of buttons -->
+<lightning-button variant="brand" label="Delete " title="Delete" onclick={handleOnDelete} class="Template-Background"></lightning-button>  
+</template>

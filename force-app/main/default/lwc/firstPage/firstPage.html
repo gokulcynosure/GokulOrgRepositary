@@ -1,0 +1,102 @@
+<template>
+    <lightning-layout multiple-rows="true">
+        <lightning-layout-item size="12">
+            <div class="page-section page-header">
+                <div class="slds-global-header slds-grid slds-grid_align-spread" style="height: 97px">
+                    <div class="slds-global-header__item">
+
+                        <img src={Banner} alt="banner Image"
+                            style="-ms-interpolation-mode:bicubic;border:none;max-width:100%;outline:none;width: 100px;vertical-align: bottom;"
+                            width="32" />
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="slds-context-bar slds-context-bar--tabs oneGlobalNav oneConsoleNav" tabindex="-1"
+                data-aura-class="oneGlobalNav oneConsoleNav">
+                <div class="slds-context-bar__primary navLeft">
+                    <div
+                        class="slds-context-bar__item slds-context-bar_dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover">
+                        <div class="appName slds-context-bar__label-action slds-context-bar__app-name"><span
+                                class="slds-truncate" title="Time Sheet">Time Sheet</span></div>
+                    </div>
+                </div>
+                <div class="slds-context-bar__tertiary slds-col--bump-left navRight">
+                    <div class="appName slds-context-bar__label-action slds-context-bar__app-name"><span
+                            class="slds-truncate" title="Time Sheet"> Welcome <b>{name}</b></span></div>
+                </div>
+            </div>
+        </lightning-layout-item>
+
+
+        <lightning-layout-item padding="around-small" size="12">
+            <lightning-layout horizontal-align="stretch" multiple-rows="true" class="x-large">
+                <lightning-layout-item padding="around-small" size="3">
+                    <lightning-card>
+
+
+                    <div class="page-section page-right">
+
+
+
+
+
+                        <lightning-vertical-navigation class="navigation" compact>
+                            <lightning-vertical-navigation-section>
+                                <template for:each={timesheetData} for:item="tsd" for:index="index">
+                                    <div class="demo-only" key={tsd.StartEndDate}>
+                                        <lightning-vertical-navigation-item-icon label={tsd.StartEndDate}
+                                            name={tsd.StartEndDate} 
+                                            data-menu-item-id={tsd.StartEndDate}
+                                            icon-name="standard:timesheet_entry"
+                                            onclick={handleTimeSheetDetail}>
+                                        </lightning-vertical-navigation-item-icon>
+                                    </div>
+                                </template>
+                            </lightning-vertical-navigation-section>
+                        </lightning-vertical-navigation>
+
+                    </div>
+                </lightning-card>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="9">
+                    <div class="page-section page-main">
+
+                        <!-- slds-medium-size_6-of-12 -->
+                        <div class="slds-align_absolute-center">
+                            <table class="slds-table  slds-table_cell-buffer 
+                            slds-table_bordered slds-border_left 
+                            slds-border_right  slds-large-size_3-of-12">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Opportunity Name">Project Name
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template for:each={timesheetProjectData} for:item="tsp" for:index="index">
+                                        <tr key={tsp.Id}>
+                                            <td data-label="Opportunity Name">
+                                                <div>
+                                                    <a href="javascript:void(0);"
+                                                        tabindex="-1">{tsp.emitCS__Project_Name__c}</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+                    </div>
+                </lightning-layout-item>                        
+            </lightning-layout>
+        </lightning-layout-item>
+
+    </lightning-layout>
+</template>

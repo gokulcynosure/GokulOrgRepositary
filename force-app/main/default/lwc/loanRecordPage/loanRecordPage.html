@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Custom Loan Application List View">
+        <div slot="actions">
+            <lightning-button label="new Loan Application" onclick={navigateToNewRecordPage}></lightning-button>
+            <lightning-button label="Delete Selected Loan Applications" onclick={deleteSelectedContacts}></lightning-button>
+
+        </div> 
+         <div class="slds-card__body_inner">
+            <p>Selected Loan Applications: {selectedContactsLen} </p>
+
+            <div class="slds-grid slds-gutters slds-p-bottom_x-small slds-p-left_x-small">
+                <lightning-input type="search" onchange={handleSearch}></lightning-input>
+            </div>
+            <lightning-datatable
+            key-field="id"
+            data={contacts}
+            columns={cols}
+            onrowselection={handleRowSelection}
+            onrowaction={handleRowAction}
+            > 
+            </lightning-datatable>
+        </div> 
+       </lightning-card> 
+</template>

@@ -1,0 +1,16 @@
+.lgc-bg {
+    background-color: rgb(0, 72, 255);
+    font-weight: bold;
+    font-size: 34px;
+   
+   
+    font-variant-caps: all-petite-caps;
+}
+
+.lgg-bg {
+    background-color: rgb(205, 205, 52);
+    font-weight: bold;
+    font-size: 44px;
+    text-align: center;
+    font-variant-caps: all-petite-caps;
+}

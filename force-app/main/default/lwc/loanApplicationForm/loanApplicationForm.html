@@ -1,0 +1,159 @@
+<template>
+    <div class="BG">
+        <h2 class="lgc-bg">
+          Loan Application Form
+        </h2>
+        <lightning-card>
+            <lightning-layout multiple-rows>
+             <lightning-layout-item size="7" padding="around-small">
+   
+    <lightning-tabset class="lgc-bg-inverse1"> 
+
+        <lightning-tab label="Loan Details">
+         
+            <lightning-combobox
+                name="progress"
+                label="Type"
+                value={value}
+                placeholder="Select Progress"
+                options={options}
+                onchange={handleChange} ></lightning-combobox>
+    
+                <div class="lgc-bg-inverse">
+                    <lightning-input type="number"  name ="loanAmount" label="loanAmount" onchange={valueChanged} value={loanAmount}></lightning-input>
+                </div>
+                <div class="lgc-bg-inverse">
+                    <lightning-input type="number"  name ="loanAmountPeriod" label="loanAmountPeriod" onchange={valueChanged} value={loanAmountPeriod}></lightning-input>
+                </div>
+            
+            
+        </lightning-tab>
+       
+        <lightning-tab label="Customer Details" title="2nd tab extended title" >
+            <div class="lgc-bg-inverse">
+                <lightning-input type="text" label="customerName"  onchange={valueChanged} value={customerName}></lightning-input>
+            </div>
+            <div class="lgc-bg-inverse">
+                <lightning-input type="Number" label="age"  name = "age" onchange={valueChanged} value={age}></lightning-input>
+            </div>
+            <div class="lgc-bg-inverse">
+                <lightning-input type="text" label="fatherName"  onchange={valueChanged} value={fatherName}></lightning-input>
+            </div>
+            <div class="lgc-bg-inverse">
+            <lightning-input type="Number" label="phoneNumber" name="phoneNumber" value={phoneNumber} onchange={valueChanged} ></lightning-input>
+    </div>
+
+    
+        <div class="lgc-bg20">
+            Address Details
+            <lightning-helptext content="Enter Address Details"></lightning-helptext>
+        </div>
+        <div class="lgc-bg-inverse">
+        <lightning-input type="text" label="street"  onchange={valueChanged} value={street}></lightning-input>
+    </div>
+    <div class="lgc-bg-inverse">
+        <lightning-input type="text" label="city"  onchange={valueChanged} value={city}></lightning-input>
+    </div>
+    <div class="lgc-bg-inverse">
+        <lightning-input type="text" label="province"  onchange={valueChanged} value={province}></lightning-input>
+    </div>
+    <div class="lgc-bg-inverse">
+        <lightning-input type="text" label="country"  onchange={valueChanged} value={country}></lightning-input>
+    </div>
+            
+                <div class="lgc-bg-inverse">
+                    <lightning-input type="Number" name = "aadharNo" label="aadharNo"  onchange={valueChanged} value={aadharNo}></lightning-input>
+                </div>
+                
+        </lightning-tab>
+        <lightning-tab label="Bank Details" title="3rd tab extended title">
+            <div class="lgc-bg-inverse">
+                <lightning-input type="Number" name = "accountNo" label="accountNo"  onchange={valueChanged} value={accountNo}></lightning-input>
+            </div>
+            <div class="lgc-bg-inverse">
+                <lightning-input type="text" name="bankName" label="bankName"  onchange={valueChanged} value={bankName}></lightning-input>
+            </div>
+            <div class="lgc-bg-inverse">
+                <lightning-input type="Number" name = "IFSCCode" label="IFSCCode"  onchange={valueChanged} value={IFSCCode}></lightning-input>
+            </div>
+            <div class="lgc-bg-inverse">
+                <lightning-input type="text" label="branch"  onchange={valueChanged} value={branch}></lightning-input>
+            </div>
+            
+        </lightning-tab>
+
+        <lightning-tab label="Properties Details" title="4th tab extended title">
+
+            <lightning-combobox
+            name="progress1"
+            label="You Have Own House?"
+            value={value1}
+           
+            options={options1}
+            onchange={handleChange1} ></lightning-combobox>
+
+         
+            <div class="lgc-bg20">
+                Own House Details
+                <lightning-helptext content="Enter Address Details"></lightning-helptext>
+            </div>
+            <div class="lgc-bg-inverse">
+            <lightning-input type="text" label="streetOwn"  onchange={valueChanged} value={streetOwn}></lightning-input>
+        </div>
+        <div class="lgc-bg-inverse">
+            <lightning-input type="text" label="cityOwn"  onchange={valueChanged} value={cityOwn}></lightning-input>
+        </div>
+        <div class="lgc-bg-inverse">
+            <lightning-input type="text" label="provinceOwn"  onchange={valueChanged} value={provinceOwn}></lightning-input>
+        </div>
+        <div class="lgc-bg-inverse">
+            <lightning-input type="text" label="countryOwn"  onchange={valueChanged} value={countryOwn}></lightning-input>
+        </div>
+            
+        <lightning-combobox
+        name="progress2"
+        label="You have Own Vehicle?"
+        value={value2}
+        placeholder="Select Progress"
+        options={options2}
+        onchange={handleChange2} ></lightning-combobox>
+                                <div class="lgc-bg-inverse">
+                                    <lightning-input type="text" label="Bike Name"  onchange={valueChanged} value={bikeName}></lightning-input>
+                                </div>
+                                <div class="lgc-bg-inverse">
+                                    <lightning-input type="Number" label="Model" name = "modelNo" onchange={valueChanged} value={modelNo}></lightning-input>
+                                </div>
+                                <div class="lgc-bg-inverse">
+                                    <lightning-input type="Text" name ="registrationNo" label="Registration Number"  onchange={valueChanged} value={registrationNo}></lightning-input>
+                                </div>
+                            
+
+    </lightning-tab>
+    <lightning-tab label="Employeement Details" title="5th tab extended title">
+        <div class="lgc-bg-inverse">
+            <lightning-input type="Text" label="Occupation"  onchange={valueChanged} value={occupation}></lightning-input>
+
+        </div>
+        <div class="lgc-bg-inverse">
+            <lightning-input type="Text" label="Company Name"  onchange={valueChanged} value={company}></lightning-input>
+            
+        </div>
+        <div class="lgc-bg-inverse">
+            <lightning-input type="Number" label="Monthly Salary" name = "salary" onchange={valueChanged} value={salary}></lightning-input>
+        </div>
+       
+    
+    </lightning-tab>
+   
+    </lightning-tabset>
+             </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+</div>
+
+   <!-- Brand variant: Identifies the primary action in a group of buttons -->
+<lightning-button variant="brand" label="Apply" title="Save" onclick={handleOnSave} class="Template-Background"></lightning-button>
+    
+    
+    
+</template>
